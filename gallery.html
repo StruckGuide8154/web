@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Man Vs Man Barbers Nottingham</title>
+  <meta name="description" content="Before and after transformations, studio shots, and product photography from Man Vs Man Barbers — Nottingham's premier private barber suite.">
+  <meta property="og:title" content="Gallery | Man Vs Man Barbers">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Placeholder colour palette for gallery tiles */
+    .g1  { background: linear-gradient(135deg, #1a1612, #2a2015); }
+    .g2  { background: linear-gradient(135deg, #111418, #0d1220); }
+    .g3  { background: linear-gradient(135deg, #181510, #241c08); }
+    .g4  { background: linear-gradient(135deg, #101010, #1e1800); }
+    .g5  { background: linear-gradient(135deg, #0e1510, #121e10); }
+    .g6  { background: linear-gradient(135deg, #1a1010, #200808); }
+    .g7  { background: linear-gradient(135deg, #151520, #0e0e18); }
+    .g8  { background: linear-gradient(135deg, #18100c, #220e00); }
+    .g9  { background: linear-gradient(135deg, #101418, #0e1820); }
+    .g10 { background: linear-gradient(135deg, #1c1808, #281e00); }
+    .g11 { background: linear-gradient(135deg, #141014, #1e0e1e); }
+    .g12 { background: linear-gradient(135deg, #101010, #181410); }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVIGATION ══ -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">MAN <span>VS</span> MAN<small>Barbers · Nottingham</small></a>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav__right">
+    <a href="https://booksy.com" target="_blank" rel="noopener" class="nav__book">Book Now</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://booksy.com" target="_blank" rel="noopener" class="mobile-book">Book Appointment</a>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">The Work</span>
+    <div class="gold-rule"></div>
+    <h1>Gallery</h1>
+    <p>Transformations, studio shots, and the products behind the results. Every cut speaks for itself.</p>
+  </div>
+</section>
+
+<!-- ══ FILTER TABS ══ -->
+<div class="gallery-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="cut">Cuts</button>
+  <button class="filter-btn" data-filter="before-after">Before &amp; After</button>
+  <button class="filter-btn" data-filter="beard">Beards</button>
+  <button class="filter-btn" data-filter="suite">The Suite</button>
+  <button class="filter-btn" data-filter="product">Products</button>
+</div>
+
+<!-- ══ GALLERY GRID ══ -->
+<!--
+  ADDING REAL PHOTOS:
+  Replace <div class="gal-item gN ..."> with:
+  <div class="gal-item" data-cat="..." data-src="images/gallery/filename.jpg">
+    <img src="images/gallery/filename.jpg" alt="descriptive alt text" loading="lazy">
+    <div class="gal-item__overlay"><span class="gal-item__label">Label</span></div>
+  </div>
+-->
+<div class="gallery-grid">
+
+  <div class="gal-item gal-item--wide g1 fade-up" data-cat="cut" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Precision Fade</span></div>
+  </div>
+
+  <div class="gal-item g2 fade-up" data-cat="cut" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Textured Crop</span></div>
+  </div>
+
+  <div class="gal-item g3 fade-up" data-cat="beard" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Full Beard Sculpt</span></div>
+  </div>
+
+  <div class="gal-item g4 fade-up" data-cat="before-after" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Before &amp; After</span></div>
+  </div>
+
+  <div class="gal-item g5 fade-up" data-cat="cut" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Classic Side Part</span></div>
+  </div>
+
+  <div class="gal-item g6 fade-up" data-cat="suite" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">The Private Suite</span></div>
+  </div>
+
+  <div class="gal-item g7 fade-up" data-cat="product" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Matte Clay Range</span></div>
+  </div>
+
+  <div class="gal-item gal-item--wide g8 fade-up" data-cat="before-after" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">The Transformation</span></div>
+  </div>
+
+  <div class="gal-item g9 fade-up" data-cat="beard" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Beard Line-Up</span></div>
+  </div>
+
+  <div class="gal-item g10 fade-up" data-cat="cut" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Skin Fade</span></div>
+  </div>
+
+  <div class="gal-item g11 fade-up" data-cat="suite" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">The Chair</span></div>
+  </div>
+
+  <div class="gal-item g12 fade-up" data-cat="product" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Beard Oil Collection</span></div>
+  </div>
+
+  <div class="gal-item g3 fade-up" data-cat="cut" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Drop Fade</span></div>
+  </div>
+
+  <div class="gal-item g5 fade-up" data-cat="beard" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Sharp Lines</span></div>
+  </div>
+
+  <div class="gal-item g7 fade-up" data-cat="before-after" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Before &amp; After</span></div>
+  </div>
+
+  <div class="gal-item g2 fade-up" data-cat="suite" data-src="#">
+    <div class="gal-item__overlay"><span class="gal-item__label">Products in Suite</span></div>
+  </div>
+
+</div>
+
+<!-- ══ LIGHTBOX ══ -->
+<div class="lightbox" role="dialog" aria-label="Image viewer">
+  <span class="lightbox__close">Close ✕</span>
+  <img src="" alt="Gallery image">
+</div>
+
+<!-- ══ CTA ══ -->
+<section class="section" style="background:var(--grey-dark);text-align:center;">
+  <div class="container fade-up">
+    <span class="eyebrow">Book Your Transformation</span>
+    <div class="gold-rule gold-rule--center"></div>
+    <h2>Your Turn</h2>
+    <p style="color:var(--white-dim);max-width:440px;margin:0 auto 2.5rem;">Every great result starts with one appointment. Book yours and let's get to work.</p>
+    <a href="https://booksy.com" target="_blank" rel="noopener" class="btn-gold">Book Now via Booksy</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="nav__logo">MAN <span>VS</span> MAN<small>Barbers · Nottingham</small></div>
+        <p>A private, appointment-only barber suite in the heart of Nottingham.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/manvsmanbarbers" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@manvsmanbarbers" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Book</h5>
+        <ul>
+          <li><a href="https://booksy.com" target="_blank" rel="noopener">Book via Booksy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Man Vs Man Barbers. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/manvsmanbarbers" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@manvsmanbarbers" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://booksy.com" target="_blank" rel="noopener">Booksy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="Back to top">&#8593;</button>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Grooming Products | Man Vs Man Barbers Nottingham</title>
+  <meta name="description" content="Private-label grooming products developed exclusively by Man Vs Man Barbers. Clay, beard oil, balm, shaving cream and more. Shop online with fast UK delivery.">
+  <meta property="og:title" content="Shop | Man Vs Man Barbers">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* shop-specific product image background colours for placeholder variety */
+    .pc-1 { background: linear-gradient(135deg,#1a1a1a,#2a2510); }
+    .pc-2 { background: linear-gradient(135deg,#111,#1c1508); }
+    .pc-3 { background: linear-gradient(135deg,#141414,#0e1a10); }
+    .pc-4 { background: linear-gradient(135deg,#1a1219,#120a0a); }
+    .pc-5 { background: linear-gradient(135deg,#181818,#281e00); }
+    .pc-6 { background: linear-gradient(135deg,#111,#1a1a2e); }
+    .pc-7 { background: linear-gradient(135deg,#1c1a10,#0f0f0f); }
+    .pc-8 { background: linear-gradient(135deg,#0a1015,#111); }
+    .pc-label {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      font-family: var(--font-h);
+      font-size: 1rem;
+      color: var(--gold-light);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVIGATION ══ -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">MAN <span>VS</span> MAN<small>Barbers · Nottingham</small></a>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav__right">
+    <a href="https://booksy.com" target="_blank" rel="noopener" class="nav__book">Book Now</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://booksy.com" target="_blank" rel="noopener" class="mobile-book">Book Appointment</a>
+</div>
+
+<!-- ══ SHOP BANNER ══ -->
+<section class="shop-banner">
+  <div class="shop-banner__inner container">
+    <div class="shop-banner__text fade-up">
+      <span class="eyebrow">Private Label</span>
+      <div class="gold-rule"></div>
+      <h1>Grooming.<br><em>Elevated.</em></h1>
+      <p>Developed in the suite, used on every client. Our private-label range is formulated for men who take their appearance seriously — available now for home use.</p>
+      <a href="#products" class="btn-gold">Shop the Range</a>
+    </div>
+    <div class="shop-banner__img pc-1 fade-up delay-2">
+      <!-- Replace: <img src="images/shop-hero.jpg" alt="Man Vs Man grooming product range"> -->
+      <span class="pc-label">Product Range</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Free UK Delivery Over £40</span><span class="sep">◆</span>
+    <span>Private Label Formula</span><span class="sep">◆</span>
+    <span>Used In-Suite Daily</span><span class="sep">◆</span>
+    <span>Cruelty Free</span><span class="sep">◆</span>
+    <span>Made in the UK</span><span class="sep">◆</span>
+    <span>Free UK Delivery Over £40</span><span class="sep">◆</span>
+    <span>Private Label Formula</span><span class="sep">◆</span>
+    <span>Used In-Suite Daily</span><span class="sep">◆</span>
+    <span>Cruelty Free</span><span class="sep">◆</span>
+    <span>Made in the UK</span><span class="sep">◆</span>
+  </div>
+</div>
+
+<!-- ══ PRODUCTS ══ -->
+<section class="shop-main" id="products">
+  <div class="container">
+    <div class="shop-main__header">
+      <h2>All Products</h2>
+      <div class="shop-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="hair">Hair</button>
+        <button class="filter-btn" data-filter="beard">Beard</button>
+        <button class="filter-btn" data-filter="skin">Skincare</button>
+        <button class="filter-btn" data-filter="shave">Shaving</button>
+        <button class="filter-btn" data-filter="sets">Sets</button>
+      </div>
+    </div>
+
+    <!--
+      ── E-COMMERCE INTEGRATION NOTE ──
+      To connect a real cart, choose one:
+      A) Shopify Buy Button — replace each "Add to Bag" button with the
+         Shopify Buy Button embed script (Settings → Sales Channels → Buy Button).
+      B) WooCommerce — point the site at a WordPress install and use
+         the product shortcodes or REST API.
+      C) Stripe Payment Links — link each button to a Stripe Payment Link URL.
+    -->
+
+    <div class="products-grid fade-up">
+
+      <div class="product-card" data-cat="hair">
+        <div class="product-card__img pc-1">
+          <span class="product-card__badge">Best Seller</span>
+          <span class="pc-label">Matte Clay</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Matte Sculpting Clay</h3>
+          <p class="product-card__sub">Strong hold, zero shine. Defines texture and keeps styles locked all day. 100ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£18</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="hair">
+        <div class="product-card__img pc-7">
+          <span class="pc-label">Pomade</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">High-Shine Pomade</h3>
+          <p class="product-card__sub">Water-based, medium hold with a classic glossy finish. Washes out clean. 100ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£17</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="hair">
+        <div class="product-card__img pc-5">
+          <span class="product-card__badge">New</span>
+          <span class="pc-label">Sea Salt Spray</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Sea Salt Texture Spray</h3>
+          <p class="product-card__sub">Natural, undone volume and texture. Spray, scrunch, go. 150ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£15</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="beard">
+        <div class="product-card__img pc-2">
+          <span class="product-card__badge">Best Seller</span>
+          <span class="pc-label">Beard Oil</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Black Amber Beard Oil</h3>
+          <p class="product-card__sub">Softens, conditions and leaves our signature black amber scent. 30ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£22</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="beard">
+        <div class="product-card__img pc-6">
+          <span class="pc-label">Beard Balm</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Shaping Beard Balm</h3>
+          <p class="product-card__sub">Light hold balm for shaping and taming. Beeswax and shea butter base. 60ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£16</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="skin">
+        <div class="product-card__img pc-3">
+          <span class="product-card__badge">New</span>
+          <span class="pc-label">Post-Shave Balm</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Post-Shave Balm</h3>
+          <p class="product-card__sub">Soothes razor burn, tightens pores and hydrates skin after every shave. 75ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£19</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="skin">
+        <div class="product-card__img pc-8">
+          <span class="pc-label">Face Wash</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Deep Cleanse Face Wash</h3>
+          <p class="product-card__sub">Charcoal and tea tree formula. Removes oil and impurities without stripping skin. 150ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£16</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="shave">
+        <div class="product-card__img pc-4">
+          <span class="pc-label">Shaving Cream</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Luxury Shaving Cream</h3>
+          <p class="product-card__sub">Dense, protective lather. Used in every hot towel shave at the suite. 125ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£20</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="shave">
+        <div class="product-card__img pc-1">
+          <span class="pc-label">Pre-Shave Oil</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">Pre-Shave Oil</h3>
+          <p class="product-card__sub">Prepares skin for a closer, smoother shave. Reduces friction and irritation. 30ml.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£18</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="sets">
+        <div class="product-card__img pc-5">
+          <span class="product-card__badge">Save £4</span>
+          <span class="pc-label">Starter Kit</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">The Starter Kit</h3>
+          <p class="product-card__sub">Matte Clay, Black Amber Beard Oil, and Post-Shave Balm. Everything you need, in one gift-ready box.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£55</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="sets">
+        <div class="product-card__img pc-2">
+          <span class="product-card__badge">Limited</span>
+          <span class="pc-label">The Shave Kit</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">The Shave Kit</h3>
+          <p class="product-card__sub">Pre-Shave Oil, Luxury Shaving Cream, and Post-Shave Balm. The full ritual at home.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£52</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="sets">
+        <div class="product-card__img pc-6">
+          <span class="product-card__badge">Gift Idea</span>
+          <span class="pc-label">Full Collection</span>
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__name">The Full Collection</h3>
+          <p class="product-card__sub">Every product in the Man Vs Man range, presented in a luxury gift box. The ultimate grooming gift.</p>
+          <div class="product-card__foot">
+            <span class="product-card__price">£120</span>
+            <button class="product-card__add">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SHOP INFO ══ -->
+<div class="shop-info fade-up">
+  <div class="shop-info__inner">
+    <span class="eyebrow" style="display:block;margin-bottom:0.5rem;">Delivery &amp; Returns</span>
+    <div class="gold-rule gold-rule--center"></div>
+    <p>Free standard UK delivery on all orders over £40. Orders dispatched within 1–2 business days. 30-day returns on unopened products.</p>
+    <p>All products are cruelty-free and developed exclusively for Man Vs Man Barbers. Have a question? <a href="contact.html" style="color:var(--gold);text-decoration:underline;">Get in touch.</a></p>
+  </div>
+</div>
+
+<!-- ══ NEWSLETTER ══ -->
+<section class="newsletter-section">
+  <div class="container">
+    <span class="eyebrow" style="color:rgba(0,0,0,0.5);">Be First</span>
+    <div class="gold-rule gold-rule--center" style="background:rgba(0,0,0,0.25);"></div>
+    <h2>New Product Drops &amp; Exclusive Discounts</h2>
+    <p>Subscribe for early access to new releases, limited-edition sets, and subscriber-only offers.</p>
+    <form class="newsletter-form" novalidate>
+      <input type="email" name="email" placeholder="Your email address" required autocomplete="email" aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="nav__logo">MAN <span>VS</span> MAN<small>Barbers · Nottingham</small></div>
+        <p>A private, appointment-only barber suite in the heart of Nottingham.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="shop.html">Hair Products</a></li>
+          <li><a href="shop.html">Beard Care</a></li>
+          <li><a href="shop.html">Skincare</a></li>
+          <li><a href="shop.html">Shaving</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Help</h5>
+        <ul>
+          <li><a href="contact.html">Delivery Info</a></li>
+          <li><a href="contact.html">Returns</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="https://booksy.com" target="_blank" rel="noopener">Book Appointment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Man Vs Man Barbers. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/manvsmanbarbers" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@manvsmanbarbers" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://booksy.com" target="_blank" rel="noopener">Booksy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="Back to top">&#8593;</button>
+<script src="js/main.js"></script>
+</body>
+</html>
