@@ -9,6 +9,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=6">
 <link rel="stylesheet" href="page-shell.css?v=6">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin=""></script>
+<style>
+  .map-placeholder { display: none; }
+  #site-map { width: 100%; height: 100%; min-height: 420px; background: #0d0a06; }
+  .leaflet-container { background: #0d0a06 !important; font-family: inherit; }
+  .mvm-popup .leaflet-popup-content-wrapper {
+    background: rgba(13,10,6,0.96);
+    border: 0.5px solid rgba(201,168,76,0.35);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    color: #f0ece4;
+    padding: 0;
+  }
+  .mvm-popup .leaflet-popup-content { margin: 16px 20px; }
+  .mvm-popup .leaflet-popup-tip { background: rgba(13,10,6,0.96); }
+  .mvm-popup .leaflet-popup-close-button { color: rgba(201,168,76,0.6) !important; top: 8px !important; right: 10px !important; }
+  .mvm-popup .leaflet-popup-close-button:hover { color: #c9a84c !important; }
+  .pop-name { font-family: 'Instrument Serif', serif; font-size: 15px; color: #c9a84c; margin-bottom: 4px; }
+  .pop-addr { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(240,236,228,0.65); line-height: 1.6; letter-spacing: 0.04em; }
+  .pop-book { display: inline-block; margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #c9a84c; text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.4); padding-bottom: 1px; }
+  .pop-book:hover { color: #e0c068; border-bottom-color: #e0c068; }
+</style>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -52,8 +75,8 @@ function Body() {
             </p>
           </div>
         </div>
-        <div className="contact-side" style={{ padding: 0 }}>
-          <div className="map-placeholder"></div>
+        <div className="contact-side" style={{ padding: 0, position: "relative" }}>
+          <div id="site-map"></div>
         </div>
       </div>
     </section>
@@ -124,6 +147,54 @@ function App() {
   );
 }
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+
+<script>
+(function initMap() {
+  var LAT = 52.9527, LNG = -1.1491;
+
+  var map = L.map('site-map', {
+    center: [LAT, LNG],
+    zoom: 16,
+    zoomControl: true,
+    scrollWheelZoom: false,
+    attributionControl: true,
+  });
+
+  // Dark basemap matching site palette
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" style="color:#c9a84c">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions" style="color:#c9a84c">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20,
+  }).addTo(map);
+
+  // Brass pin marker (custom SVG)
+  var pinSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="44" viewBox="0 0 32 44">' +
+    '<path d="M16 2C9.37 2 4 7.37 4 14c0 9.25 12 28 12 28S28 23.25 28 14C28 7.37 22.63 2 16 2z" fill="#c9a84c" stroke="#0d0a06" stroke-width="1.5"/>' +
+    '<circle cx="16" cy="14" r="5" fill="#0d0a06"/>' +
+    '</svg>';
+
+  var icon = L.divIcon({
+    html: pinSvg,
+    className: '',
+    iconSize: [32, 44],
+    iconAnchor: [16, 44],
+    popupAnchor: [0, -46],
+  });
+
+  var marker = L.marker([LAT, LNG], { icon: icon }).addTo(map);
+
+  marker.bindPopup(
+    '<div class="pop-name">Man vs Man Barbers</div>' +
+    '<div class="pop-addr">Suite 101, Phenix Salon<br>7 Flying Horse Walk<br>Nottingham NG1 2HN</div>' +
+    '<a class="pop-book" href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener">Book on Booksy →</a>',
+    { className: 'mvm-popup', maxWidth: 220 }
+  ).openPopup();
+
+  // Style Leaflet attribution to match theme
+  var attr = document.querySelector('.leaflet-control-attribution');
+  if (attr) attr.style.cssText = 'background:rgba(13,10,6,0.7);color:rgba(240,236,228,0.4);font-size:9px;';
+})();
 </script>
 </body>
 </html>
