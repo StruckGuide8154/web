@@ -1162,9 +1162,10 @@ footer.foot a:hover { color: var(--accent-bright); }
   border-left: 1px solid var(--rule);
 }
 
-/* === Tweaks: gold strength (modulates accent saturation) === */
+/* === Tweaks: gold strength (modulates saturation of decorative accent elements) === */
 :root { --gold-strength: 100%; }
-[data-accent] { filter: saturate(var(--gold-strength)); }
+.pillar .glyph, .svc-card .glyph, .marquee .acc,
+.hero-eyebrow::before, .hero-eyebrow::after { filter: saturate(var(--gold-strength)); }
 
 /* === Tweaks: typography modifiers === */
 .no-italic .hero-title em,
