@@ -1,335 +1,129 @@
-<!DOCTYPE html>
-<html lang="en-GB">
+<!doctype html>
+<html lang="en" data-accent="brass" data-pairing="serif-mono">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &amp; Blog | Man Vs Man Barbers Nottingham</title>
-  <meta name="description" content="Get in touch with Man Vs Man Barbers in Nottingham. Book an appointment, ask about products, or find us on the map. Plus: grooming tips and news on the blog.">
-  <meta property="og:title" content="Contact | Man Vs Man Barbers Nottingham">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .blog-img-1 { background: linear-gradient(135deg,#1a1612,#2a2015); }
-    .blog-img-2 { background: linear-gradient(135deg,#0e1520,#111418); }
-    .blog-img-3 { background: linear-gradient(135deg,#181510,#241c08); }
-  </style>
+<meta charset="utf-8" />
+<title>Contact — Man vs Man Barbers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="page-shell.css?v=6">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="shared.jsx"></script>
 </head>
 <body>
-
-<!-- ══ NAVIGATION ══ -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav__logo">MAN <span>VS</span> MAN<small>Barbers · Nottingham</small></a>
-  <ul class="nav__links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="nav__right">
-    <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" class="nav__book">Book Now</a>
-    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<div class="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="shop.html">Shop</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" class="mobile-book">Book Appointment</a>
-</div>
-
-<!-- ══ PAGE HERO ══ -->
-<section class="page-hero">
-  <div class="container">
-    <span class="eyebrow">Get In Touch</span>
-    <div class="gold-rule"></div>
-    <h1>Contact &amp; Find Us</h1>
-    <p>Questions about bookings, products, or the suite? We reply within 24 hours. You can also book instantly via Booksy.</p>
-  </div>
-</section>
-
-<!-- ══ CONTACT SECTION ══ -->
-<section class="contact-section">
-  <div class="container">
-    <div class="contact-layout">
-
-      <!-- FORM -->
-      <div>
-        <span class="eyebrow">Send a Message</span>
-        <div class="gold-rule"></div>
-        <form class="contact-form" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first_name" placeholder="Mohammad" autocomplete="given-name" required>
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last_name" placeholder="Smith" autocomplete="family-name">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+44 7XXX XXXXXX" autocomplete="tel">
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject">
-              <option value="">Select a topic</option>
-              <option value="booking">Booking Enquiry</option>
-              <option value="product">Product Question</option>
-              <option value="bespoke">Bespoke Package</option>
-              <option value="wholesale">Wholesale / Trade</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us what you're after..." required></textarea>
-          </div>
-          <button type="submit" class="btn-gold" style="align-self:flex-start;">Send Message</button>
-        </form>
+<div id="root"></div>
+<script type="text/babel">
+function Hero() {
+  return (
+    <section className="hero hero-overlay" style={{backgroundImage: `linear-gradient(180deg, rgba(13,10,6,0.55) 0%, rgba(13,10,6,0.7) 60%, rgba(13,10,6,0.95) 100%), url(https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1800&q=80)`, minHeight: 380}}>
+      <div className="hero-text-col">
+        <div className="hero-eyebrow"><span>X</span><span style={{color:"var(--ink-soft)"}}>·</span><span>The Visit</span></div>
+        <h1 className="hero-title">Find the <em>door.</em></h1>
+        <p className="hero-sub">Suite 101, Phenix Salon — 7 Flying Horse Walk, NG1 2HN. Look for the Phenix building and follow signs to the first floor.</p>
       </div>
+    </section>
+  );
+}
 
-      <!-- INFO -->
-      <div class="contact-info">
-        <div>
-          <span class="eyebrow">Find Us</span>
-          <div class="gold-rule"></div>
-          <h3>Man Vs Man Barbers</h3>
-          <div class="info-list">
-            <div class="info-item">
-              <div class="info-item__icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              </div>
-              <div class="info-item__text">
-                <strong>Address</strong>
-                <span>Suite 101, Phenix Salon<br>7 Flying Horse Walk<br>Nottingham, NG1 2HN</span>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-item__icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              </div>
-              <div class="info-item__text">
-                <strong>Phone / WhatsApp</strong>
-                  <span><a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" style="color:var(--gold);">Book via Booksy →</a></span>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-item__icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              </div>
-              <div class="info-item__text">
-                <strong>Email</strong>
-                <span><a href="mailto:hello@manvsmanbarbers.com" style="color:var(--gold);">hello@manvsmanbarbers.com</a></span>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-item__icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-              </div>
-              <div class="info-item__text">
-                <strong>Booksy</strong>
-                <span><a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" style="color:var(--gold);">Book online instantly →</a></span>
-              </div>
-            </div>
+function Body() {
+  const [sent, setSent] = React.useState(false);
+  return (
+    <section style={{ borderBottom: "1px solid var(--ink)" }}>
+      <div className="contact-grid">
+        <div className="contact-side">
+          <h2 style={{ fontFamily: "var(--serif)", fontWeight: 400, fontSize: 40, margin: "0 0 32px" }}>By post, by mail, <em style={{ color: "var(--accent)", fontStyle: "italic" }}>by phone.</em></h2>
+          <dl>
+            <div><dt>Address</dt><dd>Suite 101, Phenix Salon<br/>7 Flying Horse Walk<br/>Nottingham NG1 2HN</dd></div>
+            <div><dt>Hours</dt><dd>Tue–Fri · 09:00–19:00<br/>Sat · 09:00–17:00<br/>Closed Sun &amp; Mon</dd></div>
+            <div><dt>Email</dt><dd>hello@manvsmanbarbers.com</dd></div>
+            <div><dt>Booking</dt><dd><a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" style={{color:"var(--accent)"}}>Booksy — book online →</a></dd></div>
+          </dl>
+          <div style={{ marginTop: 40, padding: "24px 0", borderTop: "1px solid var(--ink)", borderBottom: "1px solid var(--ink)" }}>
+            <div style={{ fontFamily: "var(--mono)", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>Getting here</div>
+            <p style={{ fontFamily: "var(--mono)", fontSize: 12, lineHeight: 1.7, color: "var(--ink-soft)", margin: 0 }}>
+              <strong style={{ color: "var(--ink)" }}>Train</strong> · 8 min walk from Nottingham station.<br/>
+              <strong style={{ color: "var(--ink)" }}>Tram</strong> · Old Market Square stop, 3 min walk.<br/>
+              <strong style={{ color: "var(--ink)" }}>Parking</strong> · Broadmarsh NCP or Lace Market nearby.
+            </p>
           </div>
         </div>
+        <div className="contact-side" style={{ padding: 0 }}>
+          <div className="map-placeholder"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
+function Form() {
+  const [sent, setSent] = React.useState(false);
+  return (
+    <section className="section-pad" style={{ background: "var(--bg-alt)" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 64 }}>
         <div>
-          <h3 style="margin-bottom:1rem;">Opening Hours</h3>
-          <table style="width:100%;border-collapse:collapse;">
-            <tbody>
-              <tr style="border-bottom:1px solid rgba(201,168,76,0.1);">
-                <td style="padding:0.6rem 0;font-size:0.875rem;color:var(--white-dim);">Tuesday – Friday</td>
-                <td style="padding:0.6rem 0;font-size:0.875rem;color:var(--white);text-align:right;font-weight:500;">9:00am – 7:00pm</td>
-              </tr>
-              <tr style="border-bottom:1px solid rgba(201,168,76,0.1);">
-                <td style="padding:0.6rem 0;font-size:0.875rem;color:var(--white-dim);">Saturday</td>
-                <td style="padding:0.6rem 0;font-size:0.875rem;color:var(--white);text-align:right;font-weight:500;">9:00am – 5:00pm</td>
-              </tr>
-              <tr style="border-bottom:1px solid rgba(201,168,76,0.1);">
-                <td style="padding:0.6rem 0;font-size:0.875rem;color:var(--white-dim);">Sunday &amp; Monday</td>
-                <td style="padding:0.6rem 0;font-size:0.875rem;color:var(--white-dim);text-align:right;">Closed</td>
-              </tr>
-            </tbody>
-          </table>
-          <p style="margin-top:1rem;font-size:0.8rem;color:var(--white-dim);line-height:1.6;">
-            Appointments only. Walk-ins are not available. Slots are limited each week — book early to avoid disappointment.
+          <div className="section-tag"><span className="num">XI /</span> The Letter</div>
+          <h2 className="display" style={{ fontSize: "clamp(32px, 4vw, 56px)" }}>Write <em>directly.</em></h2>
+          <p style={{ fontFamily: "var(--mono)", fontSize: 12, lineHeight: 1.75, color: "var(--ink-soft)", maxWidth: "40ch", marginTop: 24 }}>
+            For wedding mornings, suite hire, press enquiries, or anything that doesn't fit the booking form. I read every message — usually within a day.
           </p>
         </div>
-
-        <!-- Google Maps embed -->
-        <div>
-          <h3 style="margin-bottom:0.75rem;">Location</h3>
-          <!--
-            Replace the src below with your real Google Maps embed URL:
-            Maps → Share → Embed a map → copy the src value
-          -->
-          <div class="map-wrapper">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2402.6788888888!2d-1.1479!3d52.9536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c2d9a60f8b7d%3A0x0!2s7+Flying+Horse+Walk%2C+Nottingham+NG1+2HN!5e0!3m2!1sen!2suk!4v1714500000000"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Man Vs Man Barbers location map"
-            ></iframe>
+        {sent ? (
+          <div style={{ alignSelf: "center" }}>
+            <div className="signature" style={{ fontSize: 56 }}>Thank you.</div>
+            <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "var(--ink-soft)", marginTop: 16 }}>I'll write back within a day.</p>
           </div>
-        </div>
+        ) : (
+          <form className="cform" onSubmit={e => { e.preventDefault(); setSent(true); }} style={{ maxWidth: "none" }}>
+            <div>
+              <label htmlFor="n">Name</label>
+              <input id="n" required />
+            </div>
+            <div>
+              <label htmlFor="e">Email</label>
+              <input id="e" type="email" required />
+            </div>
+            <div>
+              <label htmlFor="r">Regarding</label>
+              <select id="r" defaultValue="">
+                <option value="" disabled>—</option>
+                <option>A booking enquiry</option>
+                <option>Wedding morning hire</option>
+                <option>Press / interview</option>
+                <option>Wholesale (apothecary)</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="m">Message</label>
+              <textarea id="m" rows="3" required />
+            </div>
+            <button type="submit">Send the letter →</button>
+          </form>
+        )}
+      </div>
+    </section>
+  );
+}
 
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ TESTIMONIALS ══ -->
-<section class="section testimonials-section">
-  <div class="container">
-    <div class="section-header fade-up" style="text-align:center;">
-      <span class="eyebrow">Google Reviews</span>
-      <div class="gold-rule gold-rule--center"></div>
-      <h2>5 Stars. Every Time.</h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card fade-up">
-        <div class="testi-card__stars">★★★★★</div>
-        <p class="testi-card__text">"I've recommended Mohammad to every man I know. The private suite is unlike anything else in Nottingham — and the products are genuinely excellent."</p>
-        <p class="testi-card__author">Michael P. <span>— Google Review</span></p>
-      </div>
-      <div class="testi-card fade-up delay-1">
-        <div class="testi-card__stars">★★★★★</div>
-        <p class="testi-card__text">"Booked the bespoke package for my birthday. Best thing I've ever done for myself. The whole experience is just on another level — worth every penny."</p>
-        <p class="testi-card__author">Chris W. <span>— Google Review</span></p>
-      </div>
-      <div class="testi-card fade-up delay-2">
-        <div class="testi-card__stars">★★★★★</div>
-        <p class="testi-card__text">"Not just a haircut — an experience. The suite, the service, the products… everything is premium. Mohammad is the best barber I've ever been to."</p>
-        <p class="testi-card__author">Liam S. <span>— Booksy Review</span></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ BLOG ══ -->
-<section class="blog-section">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="eyebrow">The Journal</span>
-      <div class="gold-rule"></div>
-      <h2>Grooming Intel</h2>
-      <p>Practical advice, trend breakdowns, and honest product guides — straight from the suite.</p>
-    </div>
-
-    <div class="blog-grid">
-      <a href="#" class="blog-card fade-up">
-        <div class="blog-card__img blog-img-1">
-          <!-- <img src="images/blog-fade.jpg" alt="How to maintain a skin fade at home" loading="lazy"> -->
-        </div>
-        <div class="blog-card__body">
-          <span class="blog-card__tag">Hair Care</span>
-          <h3 class="blog-card__title">How to Maintain Your Fade Between Appointments</h3>
-          <span class="blog-card__date">12 April 2025</span>
-        </div>
-      </a>
-      <a href="#" class="blog-card fade-up delay-1">
-        <div class="blog-card__img blog-img-2">
-          <!-- <img src="images/blog-beard.jpg" alt="Beard oil guide" loading="lazy"> -->
-        </div>
-        <div class="blog-card__body">
-          <span class="blog-card__tag">Beard</span>
-          <h3 class="blog-card__title">Why Your Beard Oil Matters More Than Your Beard Balm</h3>
-          <span class="blog-card__date">28 March 2025</span>
-        </div>
-      </a>
-      <a href="#" class="blog-card fade-up delay-2">
-        <div class="blog-card__img blog-img-3">
-          <!-- <img src="images/blog-skincare.jpg" alt="Men's skincare for beginners" loading="lazy"> -->
-        </div>
-        <div class="blog-card__body">
-          <span class="blog-card__tag">Skincare</span>
-          <h3 class="blog-card__title">The Only Men's Skincare Routine You Actually Need</h3>
-          <span class="blog-card__date">5 March 2025</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ NEWSLETTER ══ -->
-<section class="newsletter-section">
-  <div class="container">
-    <span class="eyebrow" style="color:rgba(0,0,0,0.5);">Stay Sharp</span>
-    <div class="gold-rule gold-rule--center" style="background:rgba(0,0,0,0.25);"></div>
-    <h2>Get the Newsletter</h2>
-    <p>New blog posts, product launches, and exclusive subscriber offers — in your inbox, never your spam.</p>
-    <form class="newsletter-form" novalidate>
-      <input type="email" name="email" placeholder="Your email address" required autocomplete="email" aria-label="Email address">
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <div class="nav__logo">MAN <span>VS</span> MAN<small>Barbers · Nottingham</small></div>
-        <p>A private, appointment-only barber suite in the heart of Nottingham.</p>
-      </div>
-      <div class="footer__col">
-        <h5>Navigate</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h5>Services</h5>
-        <ul>
-          <li><a href="services.html">Precision Haircut</a></li>
-          <li><a href="services.html">Elite Facial</a></li>
-          <li><a href="services.html">Hot Towel Shave</a></li>
-          <li><a href="services.html">Bespoke Package</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h5>Hours</h5>
-        <ul>
-          <li><a href="#">Tue – Fri: 9am – 7pm</a></li>
-          <li><a href="#">Sat: 9am – 5pm</a></li>
-          <li><a href="#">Sun – Mon: Closed</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p>&copy; 2025 Man Vs Man Barbers. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/manvsmanbarbers" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@manvsmanbarbers" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener">Booksy</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<button class="scroll-top" aria-label="Back to top">&#8593;</button>
-<script src="js/main.js"></script>
+function App() {
+  return (
+    <>
+      <div className="nav-stack"><TopBar active="contact.html" /><Marquee /></div>
+      <Hero />
+      <Body />
+      <Form />
+      <Footer />
+      <MvmTweaks />
+      <window.TweaksTrigger />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
 </body>
 </html>
