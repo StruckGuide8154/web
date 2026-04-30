@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-accent="brass" data-pairing="serif-mono">
+<head>
+<meta charset="utf-8" />
+<title>Contact — Man vs Man Barbers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="page-shell.css?v=6">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="shared.jsx"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+function Hero() {
+  return (
+    <section className="hero hero-overlay" style={{backgroundImage: `linear-gradient(180deg, rgba(13,10,6,0.55) 0%, rgba(13,10,6,0.7) 60%, rgba(13,10,6,0.95) 100%), url(https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1800&q=80)`, minHeight: 380}}>
+      <div className="hero-text-col">
+        <div className="hero-eyebrow"><span>X</span><span style={{color:"var(--ink-soft)"}}>·</span><span>The Visit</span></div>
+        <h1 className="hero-title">Find the <em>door.</em></h1>
+        <p className="hero-sub">The suite has no signage. Look for the brass numeral 22a, between the wine bar and the print studio. Buzzer to the right of the door.</p>
+      </div>
+    </section>
+  );
+}
+
+function Body() {
+  const [sent, setSent] = React.useState(false);
+  return (
+    <section style={{ borderBottom: "1px solid var(--ink)" }}>
+      <div className="contact-grid">
+        <div className="contact-side">
+          <h2 style={{ fontFamily: "var(--serif)", fontWeight: 400, fontSize: 40, margin: "0 0 32px" }}>By post, by mail, <em style={{ color: "var(--accent)", fontStyle: "italic" }}>by phone.</em></h2>
+          <dl>
+            <div><dt>Address</dt><dd>22a Stoney Street<br/>Lace Market<br/>Nottingham NG1 1LP</dd></div>
+            <div><dt>Hours</dt><dd>Tue–Sat · 09:30–19:00<br/>Closed Sun & Mon</dd></div>
+            <div><dt>Telephone</dt><dd>+44 115 900 0000</dd></div>
+            <div><dt>Email</dt><dd>hello@manvsmanbarbers.com</dd></div>
+            <div><dt>Booking</dt><dd>Booksy · 7 days ahead</dd></div>
+          </dl>
+          <div style={{ marginTop: 40, padding: "24px 0", borderTop: "1px solid var(--ink)", borderBottom: "1px solid var(--ink)" }}>
+            <div style={{ fontFamily: "var(--mono)", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>Getting here</div>
+            <p style={{ fontFamily: "var(--mono)", fontSize: 12, lineHeight: 1.7, color: "var(--ink-soft)", margin: 0 }}>
+              <strong style={{ color: "var(--ink)" }}>Train</strong> · 7 min walk from Nottingham station.<br/>
+              <strong style={{ color: "var(--ink)" }}>Tram</strong> · Lace Market stop, 2 min.<br/>
+              <strong style={{ color: "var(--ink)" }}>Parking</strong> · Fletcher Gate NCP opposite.
+            </p>
+          </div>
+        </div>
+        <div className="contact-side" style={{ padding: 0 }}>
+          <div className="map-placeholder"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Form() {
+  const [sent, setSent] = React.useState(false);
+  return (
+    <section className="section-pad" style={{ background: "var(--bg-alt)" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 64 }}>
+        <div>
+          <div className="section-tag"><span className="num">XI /</span> The Letter</div>
+          <h2 className="display" style={{ fontSize: "clamp(32px, 4vw, 56px)" }}>Write <em>directly.</em></h2>
+          <p style={{ fontFamily: "var(--mono)", fontSize: 12, lineHeight: 1.75, color: "var(--ink-soft)", maxWidth: "40ch", marginTop: 24 }}>
+            For wedding mornings, suite hire, press enquiries, or anything that doesn't fit the booking form. I read every message — usually within a day.
+          </p>
+        </div>
+        {sent ? (
+          <div style={{ alignSelf: "center" }}>
+            <div className="signature" style={{ fontSize: 56 }}>Thank you.</div>
+            <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "var(--ink-soft)", marginTop: 16 }}>I'll write back within a day.</p>
+          </div>
+        ) : (
+          <form className="cform" onSubmit={e => { e.preventDefault(); setSent(true); }} style={{ maxWidth: "none" }}>
+            <div>
+              <label htmlFor="n">Name</label>
+              <input id="n" required />
+            </div>
+            <div>
+              <label htmlFor="e">Email</label>
+              <input id="e" type="email" required />
+            </div>
+            <div>
+              <label htmlFor="r">Regarding</label>
+              <select id="r" defaultValue="">
+                <option value="" disabled>—</option>
+                <option>A booking enquiry</option>
+                <option>Wedding morning hire</option>
+                <option>Press / interview</option>
+                <option>Wholesale (apothecary)</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="m">Message</label>
+              <textarea id="m" rows="3" required />
+            </div>
+            <button type="submit">Send the letter →</button>
+          </form>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <div className="nav-stack"><TopBar active="contact.html" /><Marquee /></div>
+      <Hero />
+      <Body />
+      <Form />
+      <Footer />
+      <MvmTweaks />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

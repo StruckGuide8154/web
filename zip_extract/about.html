@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-accent="brass" data-pairing="serif-mono">
+<head>
+<meta charset="utf-8" />
+<title>Story — Man vs Man Barbers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="page-shell.css?v=6">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="shared.jsx"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+function Hero() {
+  return (
+    <section className="hero hero-overlay" style={{backgroundImage: `linear-gradient(180deg, rgba(13,10,6,0.55) 0%, rgba(13,10,6,0.7) 60%, rgba(13,10,6,0.95) 100%), url(https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=80)`, minHeight: 380}}>
+      <div className="hero-text-col">
+        <div className="hero-eyebrow"><span>VII</span><span style={{color:"var(--ink-soft)"}}>·</span><span>The Story</span></div>
+        <h1 className="hero-title">From a queue<br/>to a <em>chair.</em></h1>
+        <p className="hero-sub">A short note about the suite, written for anyone considering a sitting.</p>
+      </div>
+    </section>
+  );
+}
+
+function Lede() {
+  return (
+    <section className="section-pad">
+      <div className="editorial">
+        <div className="col-img" style={{backgroundImage: "url(https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80)"}}></div>
+        <div className="col-text">
+          <p className="lede">The suite is the answer to the four-chair shop, and the four-chair shop was the answer to the queue. <em>Volume was never the goal.</em></p>
+          <p>The room is small on purpose — six metres by four — because anything bigger would be a waiting room. One chair, one client at a time. No overhearing, no next-in-line nudging the conversation along.</p>
+          <p>Most sittings are quiet. The cut happens, the record turns, the towel is hot. When we do talk it tends to be about your wife or your dog or where you grew up. Sometimes politics, never religion.</p>
+          <p>Booking opens seven days ahead, every Sunday at eight in the evening. Booksy holds the diary. Set a reminder.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Principles() {
+  const items = [
+    { h: "One chair", b: "The suite holds one client at a time. No overlap, no waiting room." },
+    { h: "Seven days", b: "Booking window opens a week ahead. Sunday evenings, eight o'clock." },
+    { h: "By appointment", b: "No walk-ins. No exceptions, even for friends." },
+    { h: "Fixed prices", b: "What's on the menu is what you pay. No upsells at the chair." },
+  ];
+  return (
+    <section className="section-pad" style={{ background: "var(--bg-alt)" }}>
+      <div className="section-tag"><span className="num">VIII /</span> Four Rules</div>
+      <h2 className="display">How the suite <em>runs.</em></h2>
+      <div style={{ marginTop: 56, borderTop: "1px solid var(--ink)" }}>
+        {items.map((t, i) => (
+          <div key={i} style={{ display: "grid", gridTemplateColumns: "120px 1fr 2fr", gap: 32, padding: "32px 0", borderBottom: "1px solid var(--ink)", alignItems: "baseline" }}>
+            <div style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 36, color: "var(--accent)" }}>0{i+1}</div>
+            <h3 style={{ fontFamily: "var(--serif)", fontWeight: 400, fontSize: 30, lineHeight: 1.1, margin: 0 }}>{t.h}</h3>
+            <p style={{ fontFamily: "var(--mono)", fontSize: 12, lineHeight: 1.75, color: "var(--ink-soft)", margin: 0, maxWidth: "60ch" }}>{t.b}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Quote() {
+  return (
+    <section className="pullquote">
+      <blockquote>
+        "I'd rather cut <span className="acc">twelve heads</span> well<br/>than forty-two badly."
+      </blockquote>
+      <cite>— Notts. Post · Profile, March 2025</cite>
+    </section>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <div className="nav-stack"><TopBar active="about.html" /><Marquee /></div>
+      <Hero />
+      <Lede />
+      <Principles />
+      <Quote />
+      <Footer />
+      <MvmTweaks />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

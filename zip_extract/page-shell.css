@@ -1,0 +1,4 @@
+/* Hide image labels when toggled off */
+body.hide-labels .hero-photo::after,
+body.hide-labels .editorial .col-img::after,
+body.hide-labels .gimg::after { display: none; }
