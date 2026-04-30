@@ -116,9 +116,9 @@ function Notes() {
       <div className="section-tag"><span className="num">VI /</span> The Fine Print</div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 48 }}>
         {[
-          { h: "Deposits", b: "Bookings via Booksy require a small deposit, redeemed against the price on the day. Held seven days." },
-          { h: "Children", b: "Boys aged 6+ welcome with a parent. No drop-offs — the room is too small for waiting." },
-          { h: "Latecomers", b: "More than ten minutes late and the sitting becomes a thirty-minute cut at the same price. The next client is already on their way." },
+          { h: "Booking", b: "All appointments are booked via Booksy. Check there for current availability — slots go quickly." },
+          { h: "Appointment only", b: "No walk-ins. The suite is private and every slot is reserved. Book ahead to avoid missing out." },
+          { h: "Punctuality", b: "Please arrive on time — each appointment is individual and a late start affects the quality of the cut." },
         ].map((x, i) => (
           <div key={i}>
             <div style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 16, paddingBottom: 16, borderBottom: "1px solid var(--rule)" }}>Note 0{i+1}</div>
