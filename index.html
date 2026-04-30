@@ -124,21 +124,24 @@ const STOCK = {
 };
 
 function Hero() {
+  const t = window.useMvmTweaks();
+  const [eyeL, eyeR] = (t.heroEyebrow || '').split('·').map(s => s.trim());
   return (
     <section className="hero hero-overlay" style={{backgroundImage: `linear-gradient(180deg, rgba(13,10,6,0.55) 0%, rgba(13,10,6,0.7) 60%, rgba(13,10,6,0.95) 100%), url(${STOCK.hero})`}}>
       <div className="hero-text-col">
-        <div className="hero-eyebrow"><span>Classic Style</span><span style={{color:"var(--ink-soft)"}}>·</span><span>Modern Precision</span></div>
-        <h1 className="hero-title">
-          Premium <em>Barber</em><br/>Experience
-        </h1>
-        <p className="hero-sub">
-          Sharp cuts. Expert beard work. Hot-towel shaves. Elevate your look — elevate your confidence.
-        </p>
+        <div className="hero-eyebrow">
+          <span>{eyeL || 'Classic Style'}</span>
+          <span style={{color:"var(--ink-soft)"}}>·</span>
+          <span>{eyeR || 'Modern Precision'}</span>
+        </div>
+        <h1 className="hero-title" dangerouslySetInnerHTML={{__html: (t.heroTitle || 'Premium <em>Barber</em><br/>Experience')}} />
+        <p className="hero-sub">{t.heroSub || 'Sharp cuts. Expert beard work. Hot-towel shaves.'}</p>
         <div className="hero-cta">
-          <a href="services.html" className="btn-gold"><window.CalIcon /> Book Appointment</a>
-          <a href="services.html" className="btn-ghost">View Services <span className="arrow">›</span></a>
+          <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" className="btn-gold"><window.CalIcon /> {t.primaryCta || 'Book Appointment'}</a>
+          <a href="services.html" className="btn-ghost">{t.secondaryCta || 'View Services'} <span className="arrow">›</span></a>
         </div>
       </div>
+      {t.heroLayout === 'split' && <div className="hero-photo-col" style={{backgroundImage: `url(${STOCK.hero})`, backgroundSize: 'cover', backgroundPosition: 'center'}} />}
     </section>
   );
 }
@@ -253,17 +256,18 @@ function CtaBar() {
 }
 
 function App() {
+  const t = window.useMvmTweaks();
   return (
     <>
       <div className="nav-stack">
         <TopBar active="index.html" />
-        <window.Marquee />
+        {t.showMarquee !== false && <window.Marquee />}
       </div>
       <Hero />
-      <Services />
-      <Pillars />
-      <Testimonials />
-      <CtaBar />
+      {t.showServices !== false && <Services />}
+      {t.showPillars !== false && <Pillars />}
+      {t.showTestimonials !== false && <Testimonials />}
+      {t.showCtaBar !== false && <CtaBar />}
       <Footer />
       <MvmTweaks />
       <window.TweaksTrigger />

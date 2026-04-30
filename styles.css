@@ -1102,3 +1102,77 @@ footer.foot a:hover { color: var(--accent-bright); }
   letter-spacing: -0.04em;
   text-transform: uppercase;
 }
+
+/* === Tweaks: density === */
+[data-density="compact"] .section-pad { padding: 28px 60px; }
+[data-density="compact"] .hero-text-col { padding: 48px 60px; }
+[data-density="compact"] .pillar { padding: 12px 20px; }
+[data-density="compact"] .svc-card { padding: 14px 14px 12px; }
+[data-density="compact"] .pillars { --pillar-gap: 10px; }
+[data-density="compact"] .foot-grid { gap: 32px; }
+[data-density="airy"] .section-pad { padding: 88px 60px; }
+[data-density="airy"] .hero-text-col { padding: 120px 60px; }
+[data-density="airy"] .pillar { padding: 32px 40px; }
+[data-density="airy"] .svc-card { padding: 36px 28px 32px; }
+[data-density="airy"] .foot-grid { gap: 80px; }
+
+/* === Tweaks: icon style === */
+[data-icon-style="square"] .pillar .glyph,
+[data-icon-style="square"] .svc-card .glyph {
+  border-radius: 4px;
+}
+[data-icon-style="bare"] .pillar .glyph,
+[data-icon-style="bare"] .svc-card .glyph {
+  border: none;
+  background: transparent;
+  width: auto; height: auto;
+}
+
+/* === Tweaks: card border === */
+[data-card-border="double"] .svc-card {
+  border-width: 1px;
+  outline: 1px solid var(--rule);
+  outline-offset: 3px;
+}
+[data-card-border="none"] .svc-card {
+  border-color: transparent;
+  background: transparent;
+}
+[data-card-border="none"] .svc-card:hover {
+  border-color: transparent;
+  background: rgba(255,255,255,0.03);
+}
+
+/* === Tweaks: hero layout === */
+[data-hero-layout="centered"] .hero-text-col {
+  max-width: 100%;
+  text-align: center;
+  padding: 100px 60px;
+}
+[data-hero-layout="centered"] .hero-eyebrow { justify-content: center; }
+[data-hero-layout="centered"] .hero-cta { justify-content: center; }
+[data-hero-layout="split"] .hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+[data-hero-layout="split"] .hero-text-col { max-width: 100%; }
+[data-hero-layout="split"] .hero-photo-col {
+  display: block;
+  background: rgba(255,255,255,0.04);
+  border-left: 1px solid var(--rule);
+}
+
+/* === Tweaks: gold strength (modulates accent saturation) === */
+:root { --gold-strength: 100%; }
+[data-accent] { filter: saturate(var(--gold-strength)); }
+
+/* === Tweaks: typography modifiers === */
+.no-italic .hero-title em,
+.no-italic .display em,
+.no-italic .foot-wordmark em,
+.no-italic em.acc { font-style: normal; }
+
+.no-upper-title .hero-title { text-transform: none; letter-spacing: -0.01em; }
+
+/* === Tweaks: image placeholder labels === */
+.hide-labels [data-label]::after { display: none; }
