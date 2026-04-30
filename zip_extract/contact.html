@@ -24,7 +24,7 @@ function Hero() {
       <div className="hero-text-col">
         <div className="hero-eyebrow"><span>X</span><span style={{color:"var(--ink-soft)"}}>·</span><span>The Visit</span></div>
         <h1 className="hero-title">Find the <em>door.</em></h1>
-        <p className="hero-sub">Suite 101, Phenix Salon — 7 Flying Horse Walk, NG1 2HN. Look for the Phenix building and follow signs to the first floor.</p>
+        <p className="hero-sub">The suite has no signage. Look for the brass numeral 22a, between the wine bar and the print studio. Buzzer to the right of the door.</p>
       </div>
     </section>
   );
@@ -38,17 +38,18 @@ function Body() {
         <div className="contact-side">
           <h2 style={{ fontFamily: "var(--serif)", fontWeight: 400, fontSize: 40, margin: "0 0 32px" }}>By post, by mail, <em style={{ color: "var(--accent)", fontStyle: "italic" }}>by phone.</em></h2>
           <dl>
-            <div><dt>Address</dt><dd>Suite 101, Phenix Salon<br/>7 Flying Horse Walk<br/>Nottingham NG1 2HN</dd></div>
-            <div><dt>Hours</dt><dd>Tue–Fri · 09:00–19:00<br/>Sat · 09:00–17:00<br/>Closed Sun &amp; Mon</dd></div>
+            <div><dt>Address</dt><dd>22a Stoney Street<br/>Lace Market<br/>Nottingham NG1 1LP</dd></div>
+            <div><dt>Hours</dt><dd>Tue–Sat · 09:30–19:00<br/>Closed Sun & Mon</dd></div>
+            <div><dt>Telephone</dt><dd>+44 115 900 0000</dd></div>
             <div><dt>Email</dt><dd>hello@manvsmanbarbers.com</dd></div>
-            <div><dt>Booking</dt><dd><a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" style={{color:"var(--accent)"}}>Booksy — book online →</a></dd></div>
+            <div><dt>Booking</dt><dd>Booksy · 7 days ahead</dd></div>
           </dl>
           <div style={{ marginTop: 40, padding: "24px 0", borderTop: "1px solid var(--ink)", borderBottom: "1px solid var(--ink)" }}>
             <div style={{ fontFamily: "var(--mono)", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>Getting here</div>
             <p style={{ fontFamily: "var(--mono)", fontSize: 12, lineHeight: 1.7, color: "var(--ink-soft)", margin: 0 }}>
-              <strong style={{ color: "var(--ink)" }}>Train</strong> · 8 min walk from Nottingham station.<br/>
-              <strong style={{ color: "var(--ink)" }}>Tram</strong> · Old Market Square stop, 3 min walk.<br/>
-              <strong style={{ color: "var(--ink)" }}>Parking</strong> · Broadmarsh NCP or Lace Market nearby.
+              <strong style={{ color: "var(--ink)" }}>Train</strong> · 7 min walk from Nottingham station.<br/>
+              <strong style={{ color: "var(--ink)" }}>Tram</strong> · Lace Market stop, 2 min.<br/>
+              <strong style={{ color: "var(--ink)" }}>Parking</strong> · Fletcher Gate NCP opposite.
             </p>
           </div>
         </div>
@@ -119,7 +120,6 @@ function App() {
       <Form />
       <Footer />
       <MvmTweaks />
-      <window.TweaksTrigger />
     </>
   );
 }
