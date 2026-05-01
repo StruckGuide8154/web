@@ -31,6 +31,7 @@ function CalIcon() {
 }
 
 function TopBar({ active }) {
+  const [menuOpen, setMenuOpen] = React.useState(false);
   React.useEffect(() => {
     const onScroll = () => {
       const tb = document.querySelector('.topbar');
@@ -41,18 +42,43 @@ function TopBar({ active }) {
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  React.useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
   return (
-    <header className="topbar">
-      <Wordmark />
-      <nav className="center">
-        {NAV.map(n => (
-          <a key={n.href} href={n.href} className={active === n.href ? "active" : ""}>{n.label}</a>
-        ))}
-      </nav>
-      <div className="right">
-        <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" className="book-pill"><CalIcon /> Book Appointment</a>
-      </div>
-    </header>
+    <>
+      <header className="topbar">
+        <Wordmark />
+        <nav className="center">
+          {NAV.map(n => (
+            <a key={n.href} href={n.href} className={active === n.href ? "active" : ""}>{n.label}</a>
+          ))}
+        </nav>
+        <div className="right">
+          <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" className="book-pill"><CalIcon /> Book Appointment</a>
+          <button className="hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
+            <span className={`ham-line${menuOpen ? ' open' : ''}`}></span>
+            <span className={`ham-line${menuOpen ? ' open' : ''}`}></span>
+            <span className={`ham-line${menuOpen ? ' open' : ''}`}></span>
+          </button>
+        </div>
+      </header>
+      {menuOpen && (
+        <div className="mob-drawer" onClick={() => setMenuOpen(false)}>
+          <nav className="mob-nav" onClick={e => e.stopPropagation()}>
+            <div className="mob-nav-head">
+              <Wordmark />
+              <button className="mob-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
+            </div>
+            {NAV.map(n => (
+              <a key={n.href} href={n.href} className={`mob-nav-link${active === n.href ? ' active' : ''}`}>{n.label}</a>
+            ))}
+            <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" className="btn-gold mob-book-btn"><CalIcon /> Book Appointment</a>
+          </nav>
+        </div>
+      )}
+    </>
   );
 }
 

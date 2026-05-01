@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <title>Services — Man vs Man Barbers</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=6">
-<link rel="stylesheet" href="page-shell.css?v=6">
+<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="page-shell.css?v=8">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -116,9 +117,9 @@ function Notes() {
       <div className="section-tag"><span className="num">VI /</span> The Fine Print</div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 48 }}>
         {[
-          { h: "Deposits", b: "Bookings via Booksy require a small deposit, redeemed against the price on the day. Held seven days." },
-          { h: "Children", b: "Boys aged 6+ welcome with a parent. No drop-offs — the room is too small for waiting." },
-          { h: "Latecomers", b: "More than ten minutes late and the sitting becomes a thirty-minute cut at the same price. The next client is already on their way." },
+          { h: "Booking", b: "All appointments are booked via Booksy. Check there for current availability — slots go quickly." },
+          { h: "Appointment only", b: "No walk-ins. The suite is private and every slot is reserved. Book ahead to avoid missing out." },
+          { h: "Punctuality", b: "Please arrive on time — each appointment is individual and a late start affects the quality of the cut." },
         ].map((x, i) => (
           <div key={i}>
             <div style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 16, paddingBottom: 16, borderBottom: "1px solid var(--rule)" }}>Note 0{i+1}</div>

@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <title>Man vs Man Barbers — Private Suite, Nottingham</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Man vs Man Barbers — a private barber suite in Nottingham's Lace Market. By appointment only via Booksy." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=6">
-<link rel="stylesheet" href="page-shell.css?v=6">
+<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="page-shell.css?v=8">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -124,21 +125,24 @@ const STOCK = {
 };
 
 function Hero() {
+  const t = window.useMvmTweaks();
+  const [eyeL, eyeR] = (t.heroEyebrow || '').split('·').map(s => s.trim());
   return (
     <section className="hero hero-overlay" style={{backgroundImage: `linear-gradient(180deg, rgba(13,10,6,0.55) 0%, rgba(13,10,6,0.7) 60%, rgba(13,10,6,0.95) 100%), url(${STOCK.hero})`}}>
       <div className="hero-text-col">
-        <div className="hero-eyebrow"><span>Classic Style</span><span style={{color:"var(--ink-soft)"}}>·</span><span>Modern Precision</span></div>
-        <h1 className="hero-title">
-          Premium <em>Barber</em><br/>Experience
-        </h1>
-        <p className="hero-sub">
-          Sharp cuts. Expert beard work. Hot-towel shaves. Elevate your look — elevate your confidence.
-        </p>
+        <div className="hero-eyebrow">
+          <span>{eyeL || 'Classic Style'}</span>
+          <span style={{color:"var(--ink-soft)"}}>·</span>
+          <span>{eyeR || 'Modern Precision'}</span>
+        </div>
+        <h1 className="hero-title" dangerouslySetInnerHTML={{__html: (t.heroTitle || 'Premium <em>Barber</em><br/>Experience')}} />
+        <p className="hero-sub">{t.heroSub || 'Sharp cuts. Expert beard work. Hot-towel shaves.'}</p>
         <div className="hero-cta">
-          <a href="services.html" className="btn-gold"><window.CalIcon /> Book Appointment</a>
-          <a href="services.html" className="btn-ghost">View Services <span className="arrow">›</span></a>
+          <a href="https://manvsmanbarbers.booksy.com/a/" target="_blank" rel="noopener" className="btn-gold"><window.CalIcon /> {t.primaryCta || 'Book Appointment'}</a>
+          <a href="services.html" className="btn-ghost">{t.secondaryCta || 'View Services'} <span className="arrow">›</span></a>
         </div>
       </div>
+      {t.heroLayout === 'split' && <div className="hero-photo-col" style={{backgroundImage: `url(${STOCK.hero})`, backgroundSize: 'cover', backgroundPosition: 'center'}} />}
     </section>
   );
 }
@@ -253,17 +257,18 @@ function CtaBar() {
 }
 
 function App() {
+  const t = window.useMvmTweaks();
   return (
     <>
       <div className="nav-stack">
         <TopBar active="index.html" />
-        <window.Marquee />
+        {t.showMarquee !== false && <window.Marquee />}
       </div>
       <Hero />
-      <Services />
-      <Pillars />
-      <Testimonials />
-      <CtaBar />
+      {t.showServices !== false && <Services />}
+      {t.showPillars !== false && <Pillars />}
+      {t.showTestimonials !== false && <Testimonials />}
+      {t.showCtaBar !== false && <CtaBar />}
       <Footer />
       <MvmTweaks />
       <window.TweaksTrigger />

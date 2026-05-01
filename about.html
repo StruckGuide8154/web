@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <title>Story — Man vs Man Barbers</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=6">
-<link rel="stylesheet" href="page-shell.css?v=6">
+<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="page-shell.css?v=8">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -37,9 +38,9 @@ function Lede() {
         <div className="col-img" style={{backgroundImage: "url(https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80)"}}></div>
         <div className="col-text">
           <p className="lede">The suite is the answer to the four-chair shop, and the four-chair shop was the answer to the queue. <em>Volume was never the goal.</em></p>
-          <p>The room is small on purpose — six metres by four — because anything bigger would be a waiting room. One chair, one client at a time. No overhearing, no next-in-line nudging the conversation along.</p>
-          <p>Most sittings are quiet. The cut happens, the record turns, the towel is hot. When we do talk it tends to be about your wife or your dog or where you grew up. Sometimes politics, never religion.</p>
-          <p>Booking opens seven days ahead, every Sunday at eight in the evening. Booksy holds the diary. Set a reminder.</p>
+          <p>The room is small on purpose — because anything bigger would be a waiting room. One chair, one client at a time. No overhearing, no next-in-line nudging the conversation along.</p>
+          <p>Most sittings are quiet. The cut happens, the towel is hot. When we do talk it tends to be about your wife or your dog or where you grew up. Sometimes politics, never religion.</p>
+          <p>Booking is via Booksy — check there for current availability and to secure your slot.</p>
         </div>
       </div>
     </section>
@@ -49,7 +50,7 @@ function Lede() {
 function Principles() {
   const items = [
     { h: "One chair", b: "The suite holds one client at a time. No overlap, no waiting room." },
-    { h: "Seven days", b: "Booking window opens a week ahead. Sunday evenings, eight o'clock." },
+    { h: "Book ahead", b: "Booking is via Booksy. Check availability there and secure your slot in advance." },
     { h: "By appointment", b: "No walk-ins. No exceptions, even for friends." },
     { h: "Fixed prices", b: "What's on the menu is what you pay. No upsells at the chair." },
   ];
@@ -76,7 +77,7 @@ function Quote() {
       <blockquote>
         "I'd rather cut <span className="acc">twelve heads</span> well<br/>than forty-two badly."
       </blockquote>
-      <cite>— Notts. Post · Profile, March 2025</cite>
+      <cite>— Mo, Man vs Man Barbers</cite>
     </section>
   );
 }
