@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="5" fill="#0d0a06"/>
+  <!-- Thin gold border -->
+  <rect x="1.5" y="1.5" width="29" height="29" rx="4" fill="none" stroke="#c9a84c" stroke-width="0.7" opacity="0.6"/>
+
+  <!-- Scissors — two blades crossing -->
+  <!-- Upper blade (top-left to bottom-right) -->
+  <g stroke="#c9a84c" stroke-linecap="round" fill="none">
+    <!-- Blade 1 -->
+    <line x1="7" y1="7" x2="25" y2="21" stroke-width="1.6"/>
+    <!-- Blade 2 -->
+    <line x1="7" y1="21" x2="25" y2="7" stroke-width="1.6"/>
+    <!-- Handle rings -->
+    <circle cx="6.5" cy="6.5" r="3" stroke-width="1.2" fill="#0d0a06"/>
+    <circle cx="6.5" cy="21.5" r="3" stroke-width="1.2" fill="#0d0a06"/>
+    <!-- Screw / pivot at crossing -->
+    <circle cx="16" cy="14" r="1.2" fill="#c9a84c" stroke="none"/>
+  </g>
+
+  <!-- "MvM" in tiny mono text at bottom -->
+  <text
+    x="16" y="29.5"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-style="italic"
+    font-size="5.5"
+    letter-spacing="0.5"
+    fill="#c9a84c"
+    opacity="0.8"
+  >MvM</text>
+</svg>
