@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Send Abrupt a short written brief for a fixed £399 local business website.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://abrupt.site/start/">
+  <title>Start a website project | Abrupt</title>
+  <style>
+    :root { --ink:#102a2b; --paper:#fffdf8; --cream:#f5f0e6; --lime:#c8f15a; --line:#d8d7cf; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--cream); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    main { width:min(1080px,calc(100% - 32px)); margin:0 auto; padding:42px 0 72px; }
+    .brand { display:inline-flex; align-items:center; gap:9px; color:var(--ink); text-decoration:none; font-weight:800; margin-bottom:44px; }
+    .brand span { display:grid; place-items:center; width:30px; height:30px; border-radius:50%; background:var(--ink); color:var(--lime); }
+    .layout { display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(32px,7vw,90px); align-items:start; }
+    h1 { margin:0 0 20px; font-size:clamp(2.7rem,7vw,5.5rem); line-height:.96; letter-spacing:-.055em; }
+    .intro { color:#526667; font-size:1.1rem; }
+    .price { margin-top:30px; padding-top:24px; border-top:1px solid #c8c5bd; }
+    .price strong { display:block; font-size:2rem; }
+    .price span { color:#5f7070; }
+    form { background:var(--paper); padding:clamp(24px,5vw,48px); box-shadow:12px 12px 0 rgba(16,42,43,.1); }
+    label { display:block; font-weight:700; margin:0 0 7px; }
+    input, textarea, select { width:100%; border:1px solid #bfc5bf; background:white; color:var(--ink); padding:13px 14px; font:inherit; border-radius:3px; }
+    textarea { min-height:100px; resize:vertical; }
+    .field { margin-bottom:20px; }
+    .hint { display:block; color:#667575; font-size:.83rem; margin-top:5px; }
+    button { width:100%; border:0; padding:15px 20px; background:var(--ink); color:white; font:700 1rem inherit; cursor:pointer; }
+    button:hover { box-shadow:5px 5px 0 var(--lime); transform:translateY(-1px); }
+    .privacy { color:#667575; font-size:.82rem; margin:15px 0 0; }
+    a { color:inherit; }
+    noscript p { padding:14px; background:#fff1d5; }
+    @media (max-width:760px) { .layout { grid-template-columns:1fr; } main { padding-top:26px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="brand" href="/"><span>A</span> Abrupt</a>
+    <div class="layout">
+      <section>
+        <h1>Tell me what you need.</h1>
+        <p class="intro">Complete the short brief. Your email app will open with the details ready to send to Harrison at Abrupt. Nothing is uploaded or stored by this page.</p>
+        <div class="price"><strong>£399 fixed scope</strong><span>£199.50 to begin · £199.50 before launch</span></div>
+      </section>
+      <form id="brief-form">
+        <div class="field"><label for="business">Business name</label><input id="business" name="business" required autocomplete="organization"></div>
+        <div class="field"><label for="link">Existing website or social page</label><input id="link" name="link" type="url" inputmode="url" placeholder="https://"></div>
+        <div class="field"><label for="services">Services and location</label><textarea id="services" name="services" required placeholder="What do you sell, and where do you work?"></textarea></div>
+        <div class="field"><label for="goal">Main goal</label><select id="goal" name="goal"><option>Get more quote requests</option><option>Increase bookings</option><option>Show services and build trust</option><option>Replace an outdated website</option><option>Other</option></select></div>
+        <div class="field"><label for="action">Preferred customer action</label><select id="action" name="action"><option>Email enquiry</option><option>Phone call</option><option>Online booking</option><option>Visit the premises</option><option>Other</option></select></div>
+        <div class="field"><label for="date">Preferred launch date</label><input id="date" name="date" type="date"><span class="hint">The first draft is normally available within 48 hours after content and initial payment are received.</span></div>
+        <button type="submit">Open the completed email</button>
+        <p class="privacy">This page only prepares an email on your device. Read the <a href="/privacy/">privacy notice</a>.</p>
+        <noscript><p>JavaScript is required to prepare the email. You can instead write to <a href="mailto:harrison@abrupt.site">harrison@abrupt.site</a>.</p></noscript>
+      </form>
+    </div>
+  </main>
+  <script>
+    document.getElementById('brief-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const subject = 'Website project enquiry - ' + data.get('business');
+      const body = [
+        'Business name: ' + data.get('business'),
+        'Existing website or social page: ' + (data.get('link') || 'None'),
+        'Services and location: ' + data.get('services'),
+        'Main goal: ' + data.get('goal'),
+        'Preferred customer action: ' + data.get('action'),
+        'Preferred launch date: ' + (data.get('date') || 'Flexible')
+      ].join('\n\n');
+      window.location.href = 'mailto:harrison@abrupt.site?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>

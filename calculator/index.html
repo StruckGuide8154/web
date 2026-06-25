@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estimate how many new customers a £399 local business website needs to pay for itself.">
+  <title>Website Break-even Calculator | Abrupt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a href="https://abrupt.site/"><span>A</span> Abrupt</a><p>Website break-even calculator</p></header>
+  <main>
+    <section class="intro"><p>Simple business case</p><h1>How quickly could your website pay for itself?</h1><p>Enter conservative numbers. This is an estimate, not a promise of enquiries or revenue.</p></section>
+    <section class="calculator">
+      <form id="calculator-form">
+        <label>Average customer or job value <span>£</span><input id="job-value" type="number" min="1" step="1" value="50" required></label>
+        <label>Gross margin after direct costs <span>%</span><input id="margin" type="number" min="1" max="100" step="1" value="60" required></label>
+        <label>Additional customers per month <span>people</span><input id="customers" type="number" min="0.1" step="0.1" value="2" required></label>
+        <button type="submit">Calculate break-even</button>
+      </form>
+      <div class="result" aria-live="polite">
+        <p>Estimated result</p>
+        <div class="metric"><strong id="profit-per-customer">£30</strong><span>gross profit per added customer</span></div>
+        <div class="metric"><strong id="customers-needed">14</strong><span>added customers to cover £399</span></div>
+        <div class="metric highlight"><strong id="months-needed">7 months</strong><span>estimated time to break even</span></div>
+        <small>Actual performance depends on demand, offer quality, traffic, competition and follow-up. No result is guaranteed.</small>
+      </div>
+    </section>
+    <section class="examples"><h2>What this means in practice</h2><div><article><b>Barber</b><p>At £30 gross profit per appointment, fourteen added bookings cover the package.</p></article><article><b>Plumber</b><p>At £120 gross profit per job, four added jobs cover the package.</p></article><article><b>Clinic</b><p>At £80 gross profit per appointment, five added appointments cover the package.</p></article></div></section>
+    <section class="cta"><p>Fixed launch package · £399</p><h2>Build an owned route from local search to direct enquiry.</h2><a href="mailto:harrison@abrupt.site?subject=Website%20calculator%20enquiry&body=Business%20name%3A%0AAverage%20customer%20value%3A%0AMain%20website%20goal%3A">Discuss my website</a></section>
+  </main>
+  <footer><p>© Abrupt</p><a href="https://abrupt.site/">Back to the main site</a></footer>
+  <script src="calculator.js"></script>
+</body>
+</html>

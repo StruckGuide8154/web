@@ -1,421 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Man Vs Man Barbers | Private Suite Nottingham | Premium Grooming</title>
-  <meta name="description" content="Nottingham's premier private barber suite. Precision cuts, elite facials, bespoke grooming packages, and private-label grooming products. Book your appointment today.">
-  <meta name="keywords" content="Nottingham barber, premium barber Nottingham, private barber suite, grooming products, beard trim Nottingham, luxury barber, Man Vs Man Barbers">
-  <meta property="og:title" content="Man Vs Man Barbers | Private Suite Nottingham">
-  <meta property="og:description" content="Nottingham's premier private barber suite. Precision cuts, elite facials & private-label grooming products.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fast, polished websites for UK barbers, trades, clinics and local service businesses. Fixed £399 launch package.">
+  <meta property="og:title" content="Abrupt | Local business websites in 48 hours">
+  <meta property="og:description" content="A clear, mobile-first website with booking, contact and local SEO foundations for £399.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://manvsmanbarbers.com">
-  <link rel="canonical" href="https://manvsmanbarbers.com">
+  <meta property="og:url" content="https://abrupt.site/">
+  <link rel="canonical" href="https://abrupt.site/">
+  <title>Abrupt | Websites that turn local searches into enquiries</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BarberShop",
-    "name": "Man Vs Man Barbers",
-    "description": "Private high-end barber suite in Nottingham offering precision haircuts, beard trims, elite facials, and private-label grooming products.",
-    "url": "https://manvsmanbarbers.com",
-    "telephone": "+44-XXXX-XXXXXX",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "YOUR ADDRESS",
-      "addressLocality": "Nottingham",
-      "addressRegion": "Nottinghamshire",
-      "postalCode": "NGXX XXX",
-      "addressCountry": "GB"
-    },
-    "priceRange": "£££",
-    "openingHours": ["Tu-Sa 09:00-19:00"],
-    "sameAs": [
-      "https://www.instagram.com/manvsmanbarbers",
-      "https://www.tiktok.com/@manvsmanbarbers"
-    ]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Abrupt home"><span>A</span> Abrupt</a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#package">Package</a>
+      <a href="/calculator/">Calculator</a>
+      <a class="button button-small" href="/start/">Start a project</a>
+    </nav>
+  </header>
 
-<!-- ══ NAVIGATION ══ -->
-<nav class="nav" id="nav" aria-label="Main navigation">
-  <a href="index.html" class="nav__logo" aria-label="Man Vs Man Barbers home">
-    MAN <span>VS</span> MAN
-    <small>Barbers · Nottingham</small>
-  </a>
-  <ul class="nav__links" role="list">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="nav__right">
-    <a href="https://booksy.com" target="_blank" rel="noopener" class="nav__book">Book Now</a>
-    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- ══ MOBILE MENU ══ -->
-<div class="mobile-menu" role="dialog" aria-label="Navigation menu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="shop.html">Shop</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://booksy.com" target="_blank" rel="noopener" class="mobile-book">Book Appointment</a>
-</div>
-
-<!-- ══ HERO ══ -->
-<section class="hero" aria-label="Hero">
-  <!-- Swap <div class="hero__bg-img"> for a <video> tag once you have footage -->
-  <div class="hero__bg">
-    <div class="hero__bg-img img-placeholder" data-label="Hero background — barber at work"></div>
-  </div>
-  <div class="hero__overlay"></div>
-
-  <div class="hero__content container">
-    <span class="eyebrow">Nottingham · Private Suite</span>
-    <h1 class="hero__title">Where Every Cut<br>Is an <em>Art Form</em></h1>
-    <p class="hero__sub">Premium barbering and private-label grooming products for the discerning gentleman.</p>
-    <div class="hero__actions">
-      <a href="https://booksy.com" target="_blank" rel="noopener" class="btn-gold">Book Your Appointment</a>
-      <a href="shop.html" class="btn-outline">Shop the Range</a>
-    </div>
-  </div>
-
-  <div class="hero__scroll" aria-hidden="true">
-    <div class="hero__scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- ══ MARQUEE ══ -->
-<div class="marquee-strip" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Precision Cuts</span><span class="sep">◆</span>
-    <span>Private Suite</span><span class="sep">◆</span>
-    <span>Elite Facials</span><span class="sep">◆</span>
-    <span>Grooming Products</span><span class="sep">◆</span>
-    <span>Nottingham</span><span class="sep">◆</span>
-    <span>Beard Sculpting</span><span class="sep">◆</span>
-    <span>Hot Towel Shave</span><span class="sep">◆</span>
-    <span>Bespoke Packages</span><span class="sep">◆</span>
-    <!-- Duplicate for seamless loop -->
-    <span>Precision Cuts</span><span class="sep">◆</span>
-    <span>Private Suite</span><span class="sep">◆</span>
-    <span>Elite Facials</span><span class="sep">◆</span>
-    <span>Grooming Products</span><span class="sep">◆</span>
-    <span>Nottingham</span><span class="sep">◆</span>
-    <span>Beard Sculpting</span><span class="sep">◆</span>
-    <span>Hot Towel Shave</span><span class="sep">◆</span>
-    <span>Bespoke Packages</span><span class="sep">◆</span>
-  </div>
-</div>
-
-<!-- ══ SERVICES TEASER ══ -->
-<section class="section services-teaser">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="eyebrow">What We Offer</span>
-      <div class="gold-rule"></div>
-      <h2>The Full Experience</h2>
-      <p>Every service is carried out in our exclusive private suite — no distractions, no queues. Just you and the craft.</p>
-    </div>
-
-    <div class="svc-grid">
-      <a href="services.html" class="svc-card fade-up">
-        <span class="svc-card__num">01</span>
-        <h3 class="svc-card__name">Precision Haircut &amp; Beard Trim</h3>
-        <p class="svc-card__desc">A meticulous cut tailored to your face shape, followed by a precision beard trim and line-up.</p>
-        <span class="svc-card__price">£50</span>
-        <span class="svc-card__link">View service &rarr;</span>
-      </a>
-      <a href="services.html" class="svc-card fade-up delay-1">
-        <span class="svc-card__num">02</span>
-        <h3 class="svc-card__name">Elite Facial</h3>
-        <p class="svc-card__desc">A deep-cleanse, exfoliation and hydration treatment using our private-label skincare range.</p>
-        <span class="svc-card__price">£60</span>
-        <span class="svc-card__link">View service &rarr;</span>
-      </a>
-      <a href="services.html" class="svc-card fade-up delay-2">
-        <span class="svc-card__num">03</span>
-        <h3 class="svc-card__name">Bespoke Grooming Package</h3>
-        <p class="svc-card__desc">The full treatment — cut, beard sculpt, hot towel shave, facial, and complimentary products to take home.</p>
-        <span class="svc-card__price">£80</span>
-        <span class="svc-card__link">View service &rarr;</span>
-      </a>
-      <a href="services.html" class="svc-card fade-up">
-        <span class="svc-card__num">04</span>
-        <h3 class="svc-card__name">Classic Haircut</h3>
-        <p class="svc-card__desc">Timeless cuts delivered with precision. Includes a wash, cut, and style finish.</p>
-        <span class="svc-card__price">£35</span>
-        <span class="svc-card__link">View service &rarr;</span>
-      </a>
-      <a href="services.html" class="svc-card fade-up delay-1">
-        <span class="svc-card__num">05</span>
-        <h3 class="svc-card__name">Hot Towel Shave</h3>
-        <p class="svc-card__desc">Traditional straight-razor shave with hot towel prep, shaving balm, and aftercare treatment.</p>
-        <span class="svc-card__price">£45</span>
-        <span class="svc-card__link">View service &rarr;</span>
-      </a>
-      <a href="services.html" class="svc-card fade-up delay-2">
-        <span class="svc-card__num">06</span>
-        <h3 class="svc-card__name">Beard Sculpt</h3>
-        <p class="svc-card__desc">Defined lines, shaped contours and a clean finish — from full beard maintenance to sharp fade lines.</p>
-        <span class="svc-card__price">£30</span>
-        <span class="svc-card__link">View service &rarr;</span>
-      </a>
-    </div>
-
-    <div style="margin-top:3rem;text-align:center;" class="fade-up">
-      <a href="services.html" class="btn-outline">See All Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ ABOUT STRIP ══ -->
-<div class="about-strip">
-  <div class="about-strip__img img-placeholder" data-label="Mohammad — barber photo">
-    <!-- Replace with: <img src="images/about-mohammad.jpg" alt="Mohammad, founder of Man Vs Man Barbers"> -->
-  </div>
-  <div class="about-strip__content fade-up">
-    <span class="eyebrow">The Founder</span>
-    <div class="gold-rule"></div>
-    <h2>Crafted from Passion, Built for Excellence</h2>
-    <blockquote class="about-strip__pull">
-      "I didn't want to open just another barber shop. I wanted to create a space where every client feels like the only client."
-    </blockquote>
-    <p>Mohammad started cutting hair at 17 and spent years mastering his craft across Nottingham's best salons before launching Man Vs Man — a fully private, appointment-only suite built around one thing: the best groom of your life.</p>
-    <a href="about.html" class="btn-outline" style="margin-top:0.5rem;">Read the Story</a>
-  </div>
-</div>
-
-<!-- ══ TIKTOK / SOCIAL ══ -->
-<section class="section social-section">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="eyebrow">Follow the Craft</span>
-      <div class="gold-rule"></div>
-      <h2>Behind the Chair</h2>
-      <p>Real results, real clients. Follow <strong>@manvsmanbarbers</strong> on TikTok and Instagram for weekly content.</p>
-    </div>
-
-    <div class="tiktok-grid">
-      <!-- Replace these placeholders with real TikTok embeds:
-           <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@manvsmanbarbers/video/VIDEOID"
-             data-video-id="VIDEOID" style="max-width:100%;min-width:unset">
-             <section></section>
-           </blockquote>
-           <script async src="https://www.tiktok.com/embed.js"></script>
-      -->
-      <div class="tiktok-wrap">
-        <div class="tiktok-placeholder">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52V6.82a4.85 4.85 0 0 1-1-.13z"/></svg>
-          <p>@manvsmanbarbers<br>Add TikTok embed here</p>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Websites for local service businesses</p>
+        <h1>Look established.<br><em>Get more enquiries.</em></h1>
+        <p class="lede">A focused, mobile-first website for barbers, trades, clinics and independent businesses. Built quickly, priced clearly, and designed around one goal: turning visitors into customers.</p>
+        <div class="actions">
+          <a class="button" href="/start/">Get a £399 website</a>
+          <a class="text-link" href="#work">See the work <span aria-hidden="true">→</span></a>
         </div>
-      </div>
-      <div class="tiktok-wrap">
-        <div class="tiktok-placeholder">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52V6.82a4.85 4.85 0 0 1-1-.13z"/></svg>
-          <p>@manvsmanbarbers<br>Add TikTok embed here</p>
-        </div>
-      </div>
-      <div class="tiktok-wrap">
-        <div class="tiktok-placeholder">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52V6.82a4.85 4.85 0 0 1-1-.13z"/></svg>
-          <p>@manvsmanbarbers<br>Add TikTok embed here</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="tiktok-cta fade-up">
-      <p>New videos every week — transformations, tutorials, and behind-the-scenes.</p>
-      <a href="https://www.tiktok.com/@manvsmanbarbers" target="_blank" rel="noopener" class="btn-gold">Follow on TikTok</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ SHOP TEASER ══ -->
-<section class="section shop-teaser">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="eyebrow">The Range</span>
-      <div class="gold-rule"></div>
-      <h2>Private-Label Grooming</h2>
-      <p>Developed and used exclusively in our suite. Formulated for men who take their grooming seriously.</p>
-    </div>
-
-    <div class="products-row">
-      <a href="shop.html" class="product-card fade-up" data-cat="hair">
-        <div class="product-card__img img-placeholder" data-label="Matte Clay product shot">
-          <span class="product-card__badge">Best Seller</span>
-        </div>
-        <div class="product-card__body">
-          <h3 class="product-card__name">Matte Sculpting Clay</h3>
-          <p class="product-card__sub">Strong hold, zero shine. Perfect for textured and defined styles.</p>
-          <div class="product-card__foot">
-            <span class="product-card__price">£18</span>
-            <button class="product-card__add" aria-label="Add Matte Sculpting Clay to basket">Add to Bag</button>
-          </div>
-        </div>
-      </a>
-
-      <a href="shop.html" class="product-card fade-up delay-1" data-cat="beard">
-        <div class="product-card__img img-placeholder" data-label="Beard Oil product shot"></div>
-        <div class="product-card__body">
-          <h3 class="product-card__name">Black Amber Beard Oil</h3>
-          <p class="product-card__sub">Softens, conditions and scents — our signature fragrance blend.</p>
-          <div class="product-card__foot">
-            <span class="product-card__price">£22</span>
-            <button class="product-card__add" aria-label="Add Beard Oil to basket">Add to Bag</button>
-          </div>
-        </div>
-      </a>
-
-      <a href="shop.html" class="product-card fade-up delay-2" data-cat="skin">
-        <div class="product-card__img img-placeholder" data-label="Aftershave Balm product shot">
-          <span class="product-card__badge">New</span>
-        </div>
-        <div class="product-card__body">
-          <h3 class="product-card__name">Post-Shave Balm</h3>
-          <p class="product-card__sub">Soothes razor burn, tightens pores, and leaves skin hydrated.</p>
-          <div class="product-card__foot">
-            <span class="product-card__price">£19</span>
-            <button class="product-card__add" aria-label="Add Post-Shave Balm to basket">Add to Bag</button>
-          </div>
-        </div>
-      </a>
-
-      <a href="shop.html" class="product-card fade-up delay-3" data-cat="sets">
-        <div class="product-card__img img-placeholder" data-label="Grooming Kit product shot"></div>
-        <div class="product-card__body">
-          <h3 class="product-card__name">The Starter Kit</h3>
-          <p class="product-card__sub">Clay, beard oil, and balm — everything you need, in one box.</p>
-          <div class="product-card__foot">
-            <span class="product-card__price">£55</span>
-            <button class="product-card__add" aria-label="Add Starter Kit to basket">Add to Bag</button>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div style="margin-top:3rem;text-align:center;" class="fade-up">
-      <a href="shop.html" class="btn-gold">Shop the Full Range</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ TESTIMONIALS ══ -->
-<section class="section testimonials-section">
-  <div class="container">
-    <div class="section-header fade-up" style="text-align:center;">
-      <span class="eyebrow">Client Words</span>
-      <div class="gold-rule gold-rule--center"></div>
-      <h2>What They Say</h2>
-    </div>
-
-    <div class="testi-grid">
-      <div class="testi-card fade-up">
-        <div class="testi-card__stars">★★★★★</div>
-        <p class="testi-card__text">"Best barber in Nottingham, full stop. The private suite experience is next level — like nothing else I've had. Left looking and feeling incredible."</p>
-        <p class="testi-card__author">James T. <span>— Nottingham</span></p>
-      </div>
-      <div class="testi-card fade-up delay-1">
-        <div class="testi-card__stars">★★★★★</div>
-        <p class="testi-card__text">"Mohammad genuinely listens to what you want. I've been to barbers all over the city — this is a completely different class. Worth every penny."</p>
-        <p class="testi-card__author">Marcus D. <span>— West Bridgford</span></p>
-      </div>
-      <div class="testi-card fade-up delay-2">
-        <div class="testi-card__stars">★★★★★</div>
-        <p class="testi-card__text">"The bespoke package is an experience. The facial, the hot towel, the products — I don't go anywhere else now. The beard oil is unreal too."</p>
-        <p class="testi-card__author">Ryan A. <span>— Beeston</span></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ NEWSLETTER ══ -->
-<section class="newsletter-section">
-  <div class="container">
-    <span class="eyebrow" style="color:rgba(0,0,0,0.5);">Stay Sharp</span>
-    <div class="gold-rule gold-rule--center" style="background:rgba(0,0,0,0.25);"></div>
-    <h2>Get Early Access &amp; Exclusive Offers</h2>
-    <p>New products, limited drops, grooming tips and booking priority — straight to your inbox.</p>
-    <form class="newsletter-form" novalidate>
-      <input type="email" name="email" placeholder="Your email address" required autocomplete="email" aria-label="Email address">
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <div class="nav__logo">MAN <span>VS</span> MAN<small>Barbers · Nottingham</small></div>
-        <p>A private, appointment-only barber suite in the heart of Nottingham. Premium grooming for men who demand the best.</p>
-      </div>
-      <div class="footer__col">
-        <h5>Navigate</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul class="trust" aria-label="Package highlights">
+          <li>48-hour first draft</li>
+          <li>Fixed scope</li>
+          <li>No monthly lock-in</li>
         </ul>
       </div>
-      <div class="footer__col">
-        <h5>Services</h5>
-        <ul>
-          <li><a href="services.html">Precision Haircut</a></li>
-          <li><a href="services.html">Elite Facial</a></li>
-          <li><a href="services.html">Hot Towel Shave</a></li>
-          <li><a href="services.html">Beard Sculpt</a></li>
-          <li><a href="services.html">Bespoke Package</a></li>
-        </ul>
+      <div class="hero-card" aria-label="Example website preview">
+        <div class="browser-bar"><i></i><i></i><i></i><span>yourbusiness.co.uk</span></div>
+        <div class="mock-site">
+          <div class="mock-nav"><b>YOUR BRAND</b><span>Book now</span></div>
+          <div class="mock-copy">
+            <small>LOCAL · INDEPENDENT · TRUSTED</small>
+            <strong>Your best first<br>impression.</strong>
+            <p>A professional home for your business, built to convert.</p>
+            <button tabindex="-1">Make an enquiry</button>
+          </div>
+          <div class="mock-stats"><span><b>01</b> Clear offer</span><span><b>02</b> Easy contact</span><span><b>03</b> Mobile first</span></div>
+        </div>
       </div>
-      <div class="footer__col">
-        <h5>Visit</h5>
-        <ul>
-          <li><a href="contact.html">Nottingham, UK</a></li>
-          <li><a href="https://booksy.com" target="_blank" rel="noopener">Book via Booksy</a></li>
-          <li><a href="contact.html">Get Directions</a></li>
-        </ul>
-        <h5 style="margin-top:1.5rem;">Hours</h5>
-        <ul>
-          <li><a href="#">Tue – Sat: 9am – 7pm</a></li>
-          <li><a href="#">Sun – Mon: Closed</a></li>
-        </ul>
+    </section>
+
+    <section class="proof" id="work">
+      <div>
+        <p class="eyebrow">Selected concept</p>
+        <h2>Premium barber website</h2>
+        <p>Conversion-focused concepts for appointment businesses and urgent local services, with mobile calls to action, clear pricing and direct contact.</p>
+        <a class="text-link" href="/demos/barber/">Barber demo <span aria-hidden="true">→</span></a>
+        <a class="text-link demo-link" href="/demos/trades/">Trades demo <span aria-hidden="true">→</span></a>
       </div>
-    </div>
-
-    <div class="footer__bottom">
-      <p>&copy; 2025 Man Vs Man Barbers. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/manvsmanbarbers" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@manvsmanbarbers" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://booksy.com" target="_blank" rel="noopener">Booksy</a>
+      <div class="concept">
+        <div class="concept-mark">M <span>VS</span> M</div>
+        <p>Private suite · Nottingham</p>
+        <h3>Where every cut<br>is an <i>art form.</i></h3>
+        <span class="concept-button">Book appointment</span>
+        <small>Concept project. Not presented as a client result.</small>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<!-- ══ SCROLL TO TOP ══ -->
-<button class="scroll-top" aria-label="Back to top">&#8593;</button>
+    <section class="package" id="package">
+      <div class="section-heading">
+        <p class="eyebrow">The launch package</p>
+        <h2>Everything needed to start converting visitors.</h2>
+      </div>
+      <div class="package-grid">
+        <div class="deliverables">
+          <div><b>01</b><span><strong>Up to five pages</strong>Home, services, about, contact and one page matched to your business.</span></div>
+          <div><b>02</b><span><strong>Conversion-focused design</strong>Clear calls to action for calls, bookings, quote requests or visits.</span></div>
+          <div><b>03</b><span><strong>Mobile and local-ready</strong>Responsive build, basic metadata, fast pages and Google-friendly structure.</span></div>
+          <div><b>04</b><span><strong>Launch support</strong>Connection to your domain and one revision round after the first draft.</span></div>
+        </div>
+        <aside class="price-card">
+          <p>Launch price</p>
+          <div class="price"><sup>£</sup>399</div>
+          <p class="muted">50% to begin · 50% before launch</p>
+          <hr>
+          <ul>
+            <li>First draft within 48 hours of receiving content</li>
+            <li>You own the finished website</li>
+            <li>Hosting and domain costs paid directly by you</li>
+          </ul>
+          <a class="button" href="/start/">Request a project</a>
+        </aside>
+      </div>
+    </section>
 
-<script src="js/main.js"></script>
+    <section class="process">
+      <p class="eyebrow">Simple process</p>
+      <div class="steps">
+        <div><span>1</span><h3>Send the brief</h3><p>Tell me what you do, who you serve and what action visitors should take.</p></div>
+        <div><span>2</span><h3>Review the draft</h3><p>Receive a working first draft, then provide one consolidated revision list.</p></div>
+        <div><span>3</span><h3>Go live</h3><p>Approve the result, settle the balance and connect your domain.</p></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <p class="eyebrow">One opening package · £399</p>
+      <h2>Your next customer will check your website.</h2>
+      <p>Make sure what they find earns their confidence.</p>
+      <a class="button button-light" href="/start/">Start your project</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top"><span>A</span> Abrupt</a>
+    <p>Independent web design for UK local businesses.</p>
+    <a href="/privacy/">Privacy</a>
+    <a href="https://github.com/StruckGuide8154">GitHub</a>
+  </footer>
 </body>
 </html>
